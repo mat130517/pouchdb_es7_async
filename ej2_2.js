@@ -111,13 +111,7 @@ function agregar() {
 
 bot_add.addEventListener('click', agregar, false)
 bot_show_DB.addEventListener('click', show_Datos, false)
-//bot_delete.addEventListener('click', delete_Dato(this.name), false)
 
-
-//add_Dato('otro5','Williams')
-//update_Dato('2020-05-10T11:00:05.249Z','cambiacambiado555')
-//show_Dato('gatito1')
-//delete_Dato("2020-05-10T11:17:22.232Z")
 
 export {delete_Dato}
 
