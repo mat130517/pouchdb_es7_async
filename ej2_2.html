@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ej2_1-Pouch/CouchDB</title>
+  <link rel="stylesheet" href="./public/global.css">
+  <!-- 
+  https://bl.ocks.org/nolanlawson/c02bba75247012afb1bf 
+  https://pouchdb.com/guides/databases.html 
+  https://pouchdb.com/2015/03/05/taming-the-async-beast-with-es7.html
+  -->
+ 
+
+</head>
+
+<body>
+<div id="form">
+  <div class="form-control">
+  <p>Nombre: <input type="text"  id="txt_name" /> 
+    email: <input type="text" value="ejemplo@ono.com"id="txt_email" />
+    <br>
+    link imagen <input type="text" 
+          value= "https://randomuser.me/api/portraits/thumb/men/51.jpg" 
+          id="txt_image" />
+  </p>
+  </div>
+  </div>
+
+  <input id='bot_add' type='button' value='Add usuario'>
+  <input id='bot_show_DB' type='button' value='Ver Todos DB'>
+
+  <div id="mensaje"></div>
+  
+  <script type="module" src="ej2_2.js"></script>
+  <script src="js/pouchdb-7.1.1.min.js"></script>
+
+  <script type="module">import * as obj from "./ej2_2.js"
+    // windows.borrar_Dato tiene alcance (scope) global , obj tiene alcance de modulo
+    window.borrar_Dato = obj.delete_Dato
+  </script>
+
+  <script>  // Hacer accesibles funciones de js  (global en modulos)
+     function delete_aqui(ide){
+      borrar_Dato(ide)
+    }
+  </script>
+ 
+  </body>
+
+</html>
+
+
+
