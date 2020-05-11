@@ -4,7 +4,6 @@ import * as render from './src/renderiza.js'
 'use strict'
 
 const db = new PouchDB('datosUsuarios')
-//const remoteCouch = 'http://admin:1234@127.0.0.1:5984/datosusuarios';
 const remoteCouch = 'http://matias:1234@127.0.0.1:5984/datosusuarios';
 
 db.changes({
